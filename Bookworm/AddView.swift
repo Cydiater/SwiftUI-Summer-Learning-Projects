@@ -24,6 +24,7 @@ struct AddView: View {
         newBook.genre = genre
         newBook.rating = rating
         newBook.review = review
+        newBook.id = UUID()
         do {
             try viewContext.save()
             showingSheet.wrappedValue.dismiss()
